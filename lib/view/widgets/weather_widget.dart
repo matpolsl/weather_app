@@ -23,12 +23,14 @@ class WeatherWidget extends StatelessWidget {
             child: ListView(
               padding: const EdgeInsets.all(20.0),
               children: [
-                Center(
-                    child: Text(weather.city,
-                        style: Theme.of(context)
-                            .textTheme
-                            .headline3
-                            ?.copyWith(fontWeight: FontWeight.w300))),
+                Text(
+                  weather.city,
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline3
+                      ?.copyWith(fontWeight: FontWeight.w300),
+                  textAlign: TextAlign.center,
+                ),
                 const Center(child: ClockWidget()),
                 Padding(
                   padding: const EdgeInsets.all(10),
