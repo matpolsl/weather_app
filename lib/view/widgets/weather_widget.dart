@@ -58,17 +58,18 @@ class WeatherWidget extends StatelessWidget {
                     ],
                   ),
                 ),
-                Center(
-                  child: Text(weather.description,
-                      style: Theme.of(context).textTheme.headline6),
+                Text(
+                  weather.description,
+                  style: Theme.of(context).textTheme.headline6,
+                  textAlign: TextAlign.center,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 7),
-                  child: Center(
-                      child: Text(
+                  child: Text(
                     'Aktualiazcja: ${DateFormat.Hm().format(weather.updateTime)}',
                     style: Theme.of(context).textTheme.bodyText2,
-                  )),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
                 const SizedBox(
                   height: 15,
