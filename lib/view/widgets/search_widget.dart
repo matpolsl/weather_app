@@ -31,7 +31,7 @@ class SearchWidget extends StatelessWidget {
             child: ElevatedButton(
                 onPressed: () {
                   final WeatherCubit weatherCubit = BlocProvider.of(context);
-                  weatherCubit.getWeather(_textController.text);
+                  weatherCubit.getWeather(_textController.text); // search function 
                 },
                 child: const Text("Wyszukaj")),
           ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../cubit/settings_cubit.dart';
 
+import '../../cubit/settings_cubit.dart';
 import '../../data/models/weather.dart';
 
 class WeatherIconWidget extends StatelessWidget {
@@ -44,7 +44,7 @@ class WeatherIconWidget extends StatelessWidget {
         ? Image.asset(
             _mapWeatherIcontoString(icon),
             scale: 0.7,
-          )
+          ) // bigger image for seniors
         : Image.asset(
             _mapWeatherIcontoString(icon),
           );

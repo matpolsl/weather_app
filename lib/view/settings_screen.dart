@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../cubit/settings_cubit.dart';
 import '../data/models/weather.dart';
 
@@ -14,7 +15,7 @@ class SettingsScreen extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
-          BlocBuilder<SettingsCubit, SettingsState>(
+          BlocBuilder<SettingsCubit, SettingsState>( // switch unit temperature 
             buildWhen: (previous, current) => previous.units != current.units,
             builder: (context, state) {
               return ListTile(
@@ -30,7 +31,7 @@ class SettingsScreen extends StatelessWidget {
               );
             },
           ),
-          BlocBuilder<SettingsCubit, SettingsState>(
+          BlocBuilder<SettingsCubit, SettingsState>( // switch accessibility
             buildWhen: (previous, current) =>
                 previous.accessibility != current.accessibility,
             builder: (context, state) {
